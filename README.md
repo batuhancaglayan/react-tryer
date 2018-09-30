@@ -1,4 +1,3 @@
-# react-tryer
 ### FetchRequestHelper usage
 
 A simple request helper written for React using Fetch. It uses 5 parameter;
