@@ -1,16 +1,16 @@
 # react-tryer
 ### FetchRequestHelper usage
 
-###### Import FetchRequestHelper jsx to your component
+###### - Import FetchRequestHelper jsx to your component
 
 > import * as fetchRequest from 'DIR_PATH/FetchRequestHelper.jsx';
   
-###### Create request object
+###### - Create request object
  
-> let requestGet = new myRequest.init("URL", "GET", "SUCCESS_HANDLER_METHOD", "ERROR_HANDLER_METHOD");
-> let requestPost = new myRequest.init("URL", "POST", "SUCCESS_HANDLER_METHOD", "ERROR_HANDLER_METHOD");
+let requestGet = new myRequest.init("URL", "GET", "SUCCESS_HANDLER_METHOD", "ERROR_HANDLER_METHOD");
+let requestPost = new myRequest.init("URL", "POST", "SUCCESS_HANDLER_METHOD", "ERROR_HANDLER_METHOD");
   
-###### Trigger call function
+###### - Trigger call function
 
   requestGet.call();
   
@@ -24,7 +24,7 @@
   requestPost.call(data);
   
   
-###### Simple Component
+###### - Simple Component
 
 import React, { Component } from 'react';
 import * as fetchRequest from 'DIR_PATH/FetchRequestHelper.jsx';;
