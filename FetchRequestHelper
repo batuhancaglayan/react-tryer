@@ -1,0 +1,37 @@
+import 'whatwg-fetch'
+
+export const init = function(url, method, succesHandler, errorHandler, headerValues = null){
+
+  let request = {
+    url : url,
+    method : method,
+    succesHandler : succesHandler,
+    errorHandler : errorHandler,
+    headers : function headers(){
+      return headerValues != null ? headerValues : {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        };
+    },
+    call : function call(data){
+      let succesHandler = this.succesHandler;
+      let errorHandler = this.errorHandler;
+      let requestData = new Request(this.url, {
+          method: this.method,
+          body: JSON.stringify(data),
+          headers: this.headers()
+      });
+
+      fetch(requestData)
+        .then(function(response) {
+          return response.json()
+        }).then(function(json) {
+          succesHandler(json);
+        }).catch(function(ex) {
+          errorHandler(ex);
+      })
+    }
+  }
+
+  return request;
+}
