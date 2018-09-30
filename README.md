@@ -1,6 +1,21 @@
 # react-tryer
 ### FetchRequestHelper usage
 
+A simple request helper written for React using Fetch. It uses 5 parameter;
+
+- url => url of service
+- method => http method (GET, POST, PUT, DELETE ...)
+- succesHandler => the method that will call when the request completes successfully
+- errorHandler => the method that will call when an error occured
+- headerValues => reqeust header object, if it is null default value is    
+
+	    {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+
+
+
 #### - Import FetchRequestHelper jsx to your component
 
 > import * as fetchRequest from 'DIR_PATH/FetchRequestHelper.jsx';
