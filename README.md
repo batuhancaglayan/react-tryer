@@ -1,6 +1,6 @@
 ### FetchRequestHelper usage
 
-A simple request helper written for React using Fetch. It uses 5 parameter;
+A simple request helper written for React using Fetch. It uses 5 parameter;;
 
 - url => url of service
 - method => http method (GET, POST, PUT, DELETE ...)
